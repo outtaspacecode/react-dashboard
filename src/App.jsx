@@ -1,7 +1,8 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import Home from './pages/Home';
-import Test from './pages/Test';
+import HomePage from './pages/HomePage';
+import TodoPage from './pages/TodoPage';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -9,10 +10,11 @@ function App() {
       <NavBar />
       <main className="main-content">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/test" element={<Test />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/todo" element={<TodoPage />} />
         </Routes>
       </main>
+      <Footer />
     </>
   );
 }

@@ -1,11 +1,11 @@
 import { TodoItem } from '../components/Todo';
 
-function Home() {
+function HomePage() {
   return (
     <>
-      
+      <TodoItem />
     </>
   );
 }
 
-export default Home;
+export default HomePage;
