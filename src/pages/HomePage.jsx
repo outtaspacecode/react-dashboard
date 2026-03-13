@@ -26,6 +26,8 @@ function HomePage() {
         <button className="btn btn-deny">Deny</button>
         <button className="btn btn-primary">Primary</button>
         <button className="btn">Base</button>
+        <br />
+        <a href="https://google.com" className="btn btn-yellow">Google</a>
       </div>
     </>
   );
