@@ -43,7 +43,8 @@ export function TodoItem() {
         onChange={handleDateChange}
         value={date}
       />
-      <button className="btn btn-confirm">Edit</button>
+      <button className="btn btn-confirm">Save</button>
+      <button className="btn btn-primary">Edit</button>
       <button className="btn btn-deny">Delete</button>
     </>
   );
