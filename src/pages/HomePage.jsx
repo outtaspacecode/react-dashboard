@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { TodoItem } from '../components/Todo';
+import weatherIcons from '../assets/weather.sprite.svg';
 
 function HomePage() {
 
@@ -44,6 +45,12 @@ function HomePage() {
         <br />
         <a href="https://google.com" className="btn btn-yellow">Google</a>
         <Link className="btn btn-pink" to="/todo">To-Do</Link>
+        <svg width="80" height="80" className="icon" role="img" style={{fill: "var(--text-color)"}}>
+          <use href={`${weatherIcons}#sun`} />
+        </svg>
+        <svg width="80" height="80" className="icon" role="img" style={{fill: "var(--text-color)"}}>
+          <use href={`${weatherIcons}#moon`} />
+        </svg>
       </div>
     </>
   );
