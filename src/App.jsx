@@ -1,5 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom';
-import NavBar from './components/NavBar';
+import GlobalHeader from './components/headers/GlobalHeader';
 import HomePage from './pages/HomePage';
 import TodoPage from './pages/TodoPage';
 import Footer from './components/Footer';
@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 function App() {
   return (
     <>
-      <NavBar />
+      <GlobalHeader />
       <main className="main-content">
         <Routes>
           <Route path="/" element={<HomePage />} />

@@ -1,0 +1,24 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: hsl(20, 5%, 12%);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.top-links, .bottom-links {
+    display: flex;
+    flex-direction: column;
+}
+
+header a {
+    fill: var(--text-color);
+}
