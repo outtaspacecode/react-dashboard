@@ -18,6 +18,8 @@
     --purple: hsl(270, 55%, 75%);
     --purple__hover: hsl(270, 55%, 70%);
 
+    --base__background: var(--text-color);
+    --base__color: var(--background);
     --primary: var(--blue);
     --primary__hover: var(--blue__hover);
     --confirm: var(--green);
@@ -30,21 +32,28 @@
     --mono: 'Ubuntu Sans Mono', 'Courier New', Courier, monospace;
 }
 [data-theme="light"] {
-    --background: hsl(45, 50%, 88%);
+    --background: hsl(260, 18%, 97%);
+    /* --background: hsl(45, 50%, 88%); */
     --background__hover: hsl(45, 50%, 80%);
     --text-color: hsl(0, 5%, 15%);
 
-    --pink: hsl(2, 60%, 60%);
-    --pink__hover: hsl(2, 60%, 55%);
-    --red: hsl(6, 65%, 45%);
-    --red__hover: hsl(6, 65%, 35%);
-    --orange: hsl(17, 76%, 53%);
-    --yellow: hsl(39, 84%, 60%);
-    --green: hsl(95, 18%, 59%);
-    --blue: hsl(218, 24%, 54%);
-    --blue__hover: hsl(218, 24%, 65%);
-    --purple: hsl(300, 21%, 55%);
+    --pink: hsl(2, 60%, 85%);
+    --pink__hover: hsl(2, 55%, 75%);
+    --red: hsl(0, 60%, 70%);
+    --red__hover: hsl(0, 55%, 55%);
+    --orange: hsl(17, 80%, 75%);
+    --orange__hover: hsl(17, 70%, 65%);
+    --yellow: hsl(40, 80%, 80%);
+    --yellow__hover: hsl(40, 75%, 70%);
+    --green: hsl(95, 25%, 70%);
+    --green__hover: hsl(95, 20%, 60%);
+    --blue: hsl(235, 30%, 80%);
+    --blue__hover: hsl(235, 25%, 75%);
+    --purple: hsl(300, 35%, 80%);
+    --purple__hover: hsl(300, 30%, 75%);
 
+    --base__background: hsl(215, 5%, 85%);
+    --base__color: var(--text-color);
     --primary: var(--blue);
     --primary__hover: var(--blue__hover);
     --confirm: var(--green);
@@ -99,21 +108,21 @@ body {
     font-size: 1rem;
     border-radius: 10px;
     padding: 3px 30px;
-    transition: background-color 0.8s ease, color 1.0s ease, box-shadow 3.0s ease;
+    transition: background-color 0.8s ease, color 1.0s ease, box-shadow 3.0s ease, border 0.8s ease;
     margin: 0 10px;
     text-decoration: none;
-    border: 2px solid var(--text-color);
+    border: 2px solid var(--base__background);
     text-align: center;
 }
 .btn:hover {
-    background-color: var(--text-color);
-    color: var(--background);
-    box-shadow: 0 0 15px var(--text-color);
+    background-color: var(--base__background);
+    color: var(--base__color);
+    box-shadow: 0 0 15px var(--base__background);
 }
 [data-theme="light"] .btn {
     border: 2px solid transparent;
-    background-color: var(--text-color);
-    color: var(--background);
+    background-color: var(--base__background);
+    color: var(--base__color);
 }
 [data-theme="light"] .btn:hover {
     box-shadow: none;
@@ -131,7 +140,7 @@ body {
     background-color: var(--primary);
 }
 [data-theme="light"] .btn-primary:hover {
-    background-color: var(--primary__hover);
+    border: 2px solid var(--primary__hover);
 }
 
 .btn-confirm {
@@ -146,7 +155,7 @@ body {
     background-color: var(--confirm);
 }
 [data-theme="light"] .btn-confirm:hover {
-    background-color: var(--confirm__hover);
+    border: 2px solid var(--confirm__hover);
 }
 
 .btn-deny {
@@ -161,7 +170,7 @@ body {
     background-color: var(--deny);
 }
 [data-theme="light"] .btn-deny:hover {
-    background-color: var(--deny__hover);
+    border: 2px solid var(--deny__hover);
 }
 
 .btn-pink {
@@ -176,7 +185,7 @@ body {
     background-color: var(--pink);
 }
 [data-theme="light"] .btn-pink:hover {
-    background-color: var(--pink__hover);
+    border: 2px solid var(--pink__hover);
 }
 
 .btn-red {
@@ -191,7 +200,7 @@ body {
     background-color: var(--red);
 }
 [data-theme="light"] .btn-red:hover {
-    background-color: var(--red__hover);
+    border: 2px solid var(--red__hover);
 }
 
 .btn-orange {
@@ -206,7 +215,7 @@ body {
     background-color: var(--orange);
 }
 [data-theme="light"] .btn-orange:hover {
-    background-color: var(--orange__hover);
+    border: 2px solid var(--orange__hover);
 }
 
 .btn-yellow {
@@ -221,7 +230,7 @@ body {
     background-color: var(--yellow);
 }
 [data-theme="light"] .btn-yellow:hover {
-    background-color: var(--yellow__hover);
+    border: 2px solid var(--yellow__hover);
 }
 
 .btn-green {
@@ -236,7 +245,7 @@ body {
     background-color: var(--green);
 }
 [data-theme="light"] .btn-green:hover {
-    background-color: var(--green__hover);
+    border: 2px solid var(--green__hover);
 }
 
 .btn-blue {
@@ -251,7 +260,7 @@ body {
     background-color: var(--blue);
 }
 [data-theme="light"] .btn-blue:hover {
-    background-color: var(--blue__hover);
+    border: 2px solid var(--blue__hover);
 }
 
 .btn-purple {
@@ -266,7 +275,7 @@ body {
     background-color: var(--purple);
 }
 [data-theme="light"] .btn-purple:hover {
-    background-color: var(--purple__hover);
+    border: 2px solid var(--purple__hover);
 }
 
 /* TODO: Remove this */

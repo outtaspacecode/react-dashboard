@@ -39,7 +39,7 @@ header {
 }
 [data-theme="light"] header {
     /* TODO: create variables for this */
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: hsl(45, 40%, 80%);
 }
 
 .link-container {
