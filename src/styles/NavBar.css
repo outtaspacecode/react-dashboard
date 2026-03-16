@@ -13,7 +13,7 @@
     transition: text-shadow 2.0s ease;
 }
 .logo p:hover {
-    text-shadow: 0 0 30px var(--light);
+    text-shadow: 0 0 30px var(--text-color);
 }
 
 .nav-link {
@@ -25,7 +25,7 @@
 }
 .nav-link:hover {
     text-decoration: underline;
-    text-shadow: 0 0 20px var(--light);
+    text-shadow: 0 0 20px var(--text-color);
 }
 
 header {
@@ -36,6 +36,10 @@ header {
     top: 0;
     position: sticky;
     padding: 0 20px;
+}
+[data-theme="light"] header {
+    /* TODO: create variables for this */
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .link-container {

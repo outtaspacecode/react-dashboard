@@ -4,7 +4,7 @@ import { HashRouter } from 'react-router-dom';
 import '@fontsource/merriweather';
 import '@fontsource/nunito';
 import '@fontsource/ubuntu-sans-mono';
-import './css/index.css';
+import './styles/index.css';
 import App from './App.jsx';
 
 createRoot(document.getElementById('root')).render(
