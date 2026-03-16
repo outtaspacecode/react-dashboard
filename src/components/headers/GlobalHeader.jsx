@@ -1,27 +1,32 @@
 import { NavLink } from 'react-router-dom';
 import '../../styles/headers/GlobalHeader.css';
-import weatherIcons from '../../assets/weather.sprite.svg';
+import navIcons from '../../assets/nav.sprite.svg';
 
 function GlobalHeader() {
   return (
     <header>
       <nav>
         <div className="top-links">
-          <NavLink to="/">
-            <svg width="50" height="50" role="presentation">
-              <use href={`${weatherIcons}#sun`} />
+          <NavLink to="/" className={({ isActive }) => isActive ? 'active-link': ''}>
+            <svg width="30" height="30" role="presentation">
+              <use href={`${navIcons}#home`} />
+            </svg>
+          </NavLink>
+          <NavLink to="/todo" className={({ isActive }) => isActive ? 'active-link': ''}>
+            <svg width="30" height="30" role="presentation">
+              <use href={`${navIcons}#grid`} />
             </svg>
           </NavLink>
           <NavLink to="/todo">
-            <svg width="50" height="50" role="presentation">
-              <use href={`${weatherIcons}#moon`} />
+            <svg width="30" height="30" role="presentation">
+              <use href={`${navIcons}#calendar`} />
             </svg>
           </NavLink>
         </div>
         <div className="bottom-links">
           <NavLink to="/">
-            <svg width="50" height="50" role="presentation">
-              <use href={`${weatherIcons}#cloudy`} />
+            <svg width="30" height="30" role="presentation">
+              <use href={`${navIcons}#settings`} />
             </svg>
           </NavLink>
         </div>
