@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeContext';
 import { ScheduleProvider } from './context/ScheduleContext';
 import GlobalHeader from './components/headers/GlobalHeader';
+import TopBar from './components/TopBar';
 import HomePage from './pages/Home/HomePage';
 import TodoPage from './pages/TodoPage';
 import Footer from './components/Footer';
@@ -12,6 +13,7 @@ function App() {
     <>
       <ThemeProvider>
         <GlobalHeader />
+        <TopBar />
         <main className="main-content">
           <ScheduleProvider>
             <Routes>

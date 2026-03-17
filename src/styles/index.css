@@ -26,13 +26,6 @@
     --deny: var(--orange);
     --deny__hover: var(--orange__hover);
 
-    --global-header: hsl(20, 5%, 12%);
-    --global-header__hover: hsl(0, 3%, 22%);
-    --header-active-bg: var(--text-color);
-    --header-active-link: var(--background);
-
-    --secondary-header: hsl(0, 3%, 18%);
-
     --highlight: var(--text-color);
     --highlight-color: var(--background);
 
@@ -67,13 +60,6 @@
     --confirm__hover: var(--green__hover);
     --deny: var(--red);
     --deny__hover: var(--red__hover);
-
-    --global-header: hsl(45, 40%, 85%);
-    --global-header__hover: hsl(45, 45%, 92%);
-    --header-active-bg: white;
-    --header-active-link: var(--text-color);
-
-    --secondary-header: white;
 
     --highlight: var(--global-header);
     --highlight-color: var(--text-color);

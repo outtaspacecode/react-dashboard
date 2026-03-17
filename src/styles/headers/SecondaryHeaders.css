@@ -1,3 +1,10 @@
+:root {
+    --secondary-header: hsl(0, 3%, 18%);
+}
+[data-theme="light"] {
+    --secondary-header: white;
+}
+
 .secondary-header {
     background-color: var(--secondary-header);
     position: fixed;

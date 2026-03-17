@@ -1,3 +1,16 @@
+:root {
+    --global-header: hsl(20, 5%, 12%);
+    --global-header__hover: hsl(0, 3%, 22%);
+    --header-active-bg: var(--text-color);
+    --header-active-link: var(--background);
+}
+[data-theme="light"] {
+    --global-header: hsl(45, 40%, 85%);
+    --global-header__hover: hsl(45, 45%, 92%);
+    --header-active-bg: white;
+    --header-active-link: var(--text-color);
+}
+
 header {
     position: fixed;
     top: 0;

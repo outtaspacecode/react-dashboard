@@ -33,12 +33,6 @@ function OverviewTab() {
         <button className="btn btn-deny">Deny</button>
         <button className="btn btn-primary">Primary</button>
         <button className="btn">Base</button>
-        <button
-          className="btn btn-purple"
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-        >
-          Change Theme
-        </button>
         <br />
         <a href="https://google.com" className="btn btn-yellow">Google</a>
         <Link className="btn btn-pink" to="/todo">To-Do</Link>
