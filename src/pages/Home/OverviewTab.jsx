@@ -1,11 +1,8 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { TodoItem } from '../components/Todo';
-import weatherIcons from '../assets/weather.sprite.svg';
+import { Link } from 'react-router-dom';
 
-function HomePage() {
-
-  const [theme, setTheme] = useState('dark');
+function OverviewTab() {
+  const [theme, setTheme] = useState('light');
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -13,7 +10,6 @@ function HomePage() {
 
   return (
     <>
-      <TodoItem />
       <div
         className="btn-container"
         style={{
@@ -50,4 +46,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default OverviewTab;

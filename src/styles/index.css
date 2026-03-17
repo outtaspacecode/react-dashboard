@@ -1,6 +1,5 @@
 :root {
     --background: hsl(0, 5%, 15%);
-    --background__hover: hsl(0, 5%, 22%);
     --text-color: hsl(45, 40%, 80%);
 
     --pink: hsl(350, 75%, 75%);
@@ -28,17 +27,21 @@
     --deny__hover: var(--orange__hover);
 
     --global-header: hsl(20, 5%, 12%);
+    --global-header__hover: hsl(0, 3%, 22%);
     --header-active-bg: var(--text-color);
     --header-active-link: var(--background);
+
+    --secondary-header: hsl(0, 3%, 18%);
+
+    --highlight: var(--text-color);
+    --highlight-color: var(--background);
 
     --serif: 'Merriweather', 'Times New Roman', Times, serif;
     --sans: 'Nunito', Arial, Helvetica, sans-serif;
     --mono: 'Ubuntu Sans Mono', 'Courier New', Courier, monospace;
 }
 [data-theme="light"] {
-    --background: hsl(260, 18%, 97%);
-    /* --background: hsl(45, 50%, 88%); */
-    --background__hover: hsl(45, 50%, 80%);
+    --background: hsl(260, 18%, 95%);
     --text-color: hsl(0, 5%, 15%);
 
     --pink: hsl(2, 60%, 85%);
@@ -66,8 +69,14 @@
     --deny__hover: var(--red__hover);
 
     --global-header: hsl(45, 40%, 85%);
+    --global-header__hover: hsl(45, 45%, 92%);
     --header-active-bg: white;
     --header-active-link: var(--text-color);
+
+    --secondary-header: white;
+
+    --highlight: var(--global-header);
+    --highlight-color: var(--text-color);
 }
 
 * {
@@ -76,8 +85,8 @@
 }
 
 ::selection {
-    background-color: var(--text-color);
-    color: var(--background);
+    background-color: var(--highlight);
+    color: var(--highlight-color);
 }
 
 #root {
@@ -88,7 +97,7 @@
 
 .main-content {
     flex: 1;
-    margin-left: 100px;
+    margin-left: 200px;
     color: var(--text-color);
 }
 footer {
