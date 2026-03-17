@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
+import { ThemeContext } from '../../context/ThemeContext';
 import { Link } from 'react-router-dom';
 
 function OverviewTab() {
-  const [theme, setTheme] = useState('light');
+  const {theme, setTheme} = useContext(ThemeContext);
 
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);

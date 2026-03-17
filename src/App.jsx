@@ -1,4 +1,6 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
+import { ScheduleProvider } from './context/ScheduleContext';
 import GlobalHeader from './components/headers/GlobalHeader';
 import HomePage from './pages/Home/HomePage';
 import TodoPage from './pages/TodoPage';
@@ -8,16 +10,20 @@ import OverviewTab from './pages/Home/OverviewTab';
 function App() {
   return (
     <>
-      <GlobalHeader />
-      <main className="main-content">
-        <Routes>
-          <Route path="/" element={<HomePage />}>
-            <Route index element={<OverviewTab />} />
-          </Route>
-          <Route path="/todo" element={<TodoPage />} />
-        </Routes>
-      </main>
-      <Footer />
+      <ThemeProvider>
+        <GlobalHeader />
+        <main className="main-content">
+          <ScheduleProvider>
+            <Routes>
+              <Route path="/" element={<HomePage />}>
+                <Route index element={<OverviewTab />} />
+              </Route>
+              <Route path="/todo" element={<TodoPage />} />
+            </Routes>
+          </ScheduleProvider>
+        </main>
+        <Footer />
+      </ThemeProvider>
     </>
   );
 }
