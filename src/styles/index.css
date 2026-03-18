@@ -19,12 +19,13 @@
 
     --base__background: var(--text-color);
     --base__color: var(--background);
-    --primary: var(--blue);
-    --primary__hover: var(--blue__hover);
+    --accent: var(--blue);
+    --accent__hover: var(--blue__hover);
     --confirm: var(--green);
     --confirm__hover: var(--green__hover);
     --deny: var(--orange);
     --deny__hover: var(--orange__hover);
+
 
     --highlight: var(--text-color);
     --highlight-color: var(--background);
@@ -54,8 +55,8 @@
 
     --base__background: hsl(215, 5%, 85%);
     --base__color: var(--text-color);
-    --primary: var(--blue);
-    --primary__hover: var(--blue__hover);
+    --accent: var(--blue);
+    --accent__hover: var(--blue__hover);
     --confirm: var(--green);
     --confirm__hover: var(--green__hover);
     --deny: var(--red);
@@ -136,19 +137,19 @@ body {
     box-shadow: none;
 }
 
-.btn-primary {
-    border: 2px solid var(--primary);
-    color: var(--primary);
+.btn-accent {
+    border: 2px solid var(--accent);
+    color: var(--accent);
 }
-.btn-primary:hover {
-    background-color: var(--primary);
-    box-shadow: 0 0 15px var(--primary__hover);
+.btn-accent:hover {
+    background-color: var(--accent);
+    box-shadow: 0 0 15px var(--accent__hover);
 }
-[data-theme="light"] .btn-primary {
-    background-color: var(--primary);
+[data-theme="light"] .btn-accent {
+    background-color: var(--accent);
 }
-[data-theme="light"] .btn-primary:hover {
-    border: 2px solid var(--primary__hover);
+[data-theme="light"] .btn-accent:hover {
+    border: 2px solid var(--accent__hover);
 }
 
 .btn-confirm {

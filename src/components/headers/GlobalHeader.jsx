@@ -11,7 +11,7 @@ function GlobalHeader() {
     <header>
       <nav>
         <div className="top-links">
-          <NavLink to="/" className={({ isActive }) => isActive ? 'active-link': ''} aria-label="Home">
+          <NavLink to="/home" className={({ isActive }) => isActive ? 'active-link': ''} aria-label="Home">
             <GoHome size={30} strokeWidth={0.3} />
           </NavLink>
           <NavLink to="/todo" className={({ isActive }) => isActive ? 'active-link': ''} aria-label="Dashboard">

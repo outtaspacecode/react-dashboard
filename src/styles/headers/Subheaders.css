@@ -1,0 +1,47 @@
+:root {
+    --subheader: hsl(0, 3%, 18%);
+    --subheader-link: hsl(0, 3%, 30%);
+    --subheader-link-active: hsl(0, 3%, 25%);
+}
+[data-theme="light"] {
+    --subheader: white;
+    --subheader-link: hsl(260, 9%, 97%);
+    --subheader-link-active: hsl(260, 9%, 92%);
+}
+
+.subheader {
+    background-color: var(--subheader);
+    position: fixed;
+    top: 0;
+    left: 60px;
+    height: 100vh;
+    border-radius: 15px 0 0 15px;
+    padding: 25px 10px;
+    padding-right: 0;
+    width: 120px;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.subheader a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 9999px 0 0 9999px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.subheader a:hover {
+    background-color: var(--subheader-link);
+}
+
+/* .subheader .active-link,
+.subheader .active-link:hover {
+    background-color: var(--subheader-link-active);
+} */
+.subheader .active-link {
+    border-right: 3px solid var(--accent);
+}

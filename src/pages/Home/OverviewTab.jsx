@@ -9,6 +9,11 @@ function OverviewTab() {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
 
+  // TODO: This should eventually be stored in a state accesible via context but for now it's edited on the fly
+  function changeAccent(color) {
+    document.documentElement.style.setProperty('--accent', `var(--${color})`);
+  }
+
   return (
     <>
       <div
@@ -21,17 +26,17 @@ function OverviewTab() {
           marginTop: "20px"
         }}
       >
-        <button className="btn btn-pink">Pink</button>
-        <button className="btn btn-red">Red</button>
-        <button className="btn btn-orange">Orange</button>
-        <button className="btn btn-yellow">Yellow</button>
-        <button className="btn btn-green">Green</button>
-        <button className="btn btn-blue">Blue</button>
-        <button className="btn btn-purple">Purple</button>
+        <button className="btn btn-pink" onClick={() => changeAccent('pink')}>Pink</button>
+        <button className="btn btn-red" onClick={() => changeAccent('red')}>Red</button>
+        <button className="btn btn-orange" onClick={() => changeAccent('orange')}>Orange</button>
+        <button className="btn btn-yellow" onClick={() => changeAccent('yellow')}>Yellow</button>
+        <button className="btn btn-green" onClick={() => changeAccent('green')}>Green</button>
+        <button className="btn btn-blue" onClick={() => changeAccent('blue')}>Blue</button>
+        <button className="btn btn-purple" onClick={() => changeAccent('purple')}>Purple</button>
         <br />
         <button className="btn btn-confirm">Confirm</button>
         <button className="btn btn-deny">Deny</button>
-        <button className="btn btn-primary">Primary</button>
+        <button className="btn btn-accent">Accent</button>
         <button className="btn">Base</button>
         <br />
         <a href="https://google.com" className="btn btn-yellow">Google</a>

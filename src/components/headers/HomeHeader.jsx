@@ -1,11 +1,18 @@
 import { NavLink } from 'react-router-dom';
-import '../../styles/headers/SecondaryHeaders.css';
+import { IoCodeSlashOutline } from 'react-icons/io5';
+import { TfiStatsUp } from 'react-icons/tfi';
+import '../../styles/headers/Subheaders.css';
 
 function HomeHeader() {
   return (
-    <div className="secondary-header">
-      <NavLink to="/" className={({ isActive }) => isActive ? 'active-link' : ''}>
-        Overview
+    <div className="subheader">
+      <NavLink end to="/home" className={({ isActive }) => isActive ? 'active-link' : ''}>
+        <IoCodeSlashOutline size={18} />
+        Welcome
+      </NavLink>
+      <NavLink to="stats" className={({ isActive}) => isActive ? 'active-link' : ''}>
+        <TfiStatsUp size={18} />
+        Statistics
       </NavLink>
     </div>
   )
