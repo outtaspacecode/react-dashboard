@@ -12,6 +12,7 @@ function OverviewTab() {
   // TODO: This should eventually be stored in a state accesible via context but for now it's edited on the fly
   function changeAccent(color) {
     document.documentElement.style.setProperty('--accent', `var(--${color})`);
+    document.documentElement.style.setProperty('--accent__hover', `var(--${color}__hover)`);
   }
 
   return (
